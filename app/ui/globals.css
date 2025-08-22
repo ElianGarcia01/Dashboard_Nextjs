@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Esto envuelve la librería en la capa de componentes para que no pise los estilos base */
+@layer components {
+  @import "anjrot-components/dist/style.css";
+}
