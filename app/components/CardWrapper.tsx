@@ -6,20 +6,20 @@ const CardWrapper = async () => {
       const {
         numberOfCustomers,
         numberOfInvoices,
-        totalPaidinVoices,
-        totalPendingInVoices,
+        totalPaidInvoices,
+        totalPendingInvoices,
       } = await fetchCardData();
   return (
     <>
       <InfoCard
         title="Collected"
-        value={totalPaidinVoices}
+        value={totalPaidInvoices}
         type="collected"
         currency={{ locale: "en-US", currency: "USD" }}
       />
       <InfoCard
         title="Pending"
-        value={totalPendingInVoices}
+        value={totalPendingInvoices}
         type="pending"
         currency={{ locale: "en-US", currency: "USD" }}
       />
