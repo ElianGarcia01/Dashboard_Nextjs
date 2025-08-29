@@ -1,5 +1,5 @@
 import Logo from "@/app/components/Logo";
-import React from "react";
+import React, { Suspense } from "react";
 import LoginWrapper from "../components/LoginWrapper";
 
 const Login = () => {
@@ -11,7 +11,9 @@ const Login = () => {
             <Logo />
           </div>
         </div>
-        <LoginWrapper />
+        <Suspense fallback={<div>Cargando...</div>}>
+          <LoginWrapper />
+        </Suspense>
       </div>
     </main>
   );
